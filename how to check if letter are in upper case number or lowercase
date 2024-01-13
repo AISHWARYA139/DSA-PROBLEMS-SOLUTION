@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+  char ch;
+  cin>>ch;
+  if(ch>='a' && ch<='b'){
+      cout<< "letter in lowercase";
+  }
+  else if(ch>='A' && ch<='Z'){
+      cout<<"letter in uppercase";
+  }
+  else if (ch <= '9'){
+      cout<<"this is a number";
+  }
+  else{
+      return 0;
+  }
+  return 0;
+}
