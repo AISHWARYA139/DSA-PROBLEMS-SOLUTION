@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int bitwiseComplement(int n) {
+        int m=n;
+        int mask=0;
+        if(n==0){
+            return 1;
+        }
+        while(m!=0){
+            mask =(mask<<1)| 1;//left shift and or 1
+            m=m>>1;//right shift
+        }
+        int ans = (~n)& mask ; //010-> 101 & mask ie(1 0->0) th of &tabel
+        return ans;
+    }
+
+};
