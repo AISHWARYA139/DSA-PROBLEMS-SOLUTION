@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+ vector<int> intersectionOfArrays(vector<int>a, vector<int>b){
+        vector<int>ans;
+        vector<int>visited(b.size(),0);
+       
+        for(int i=0;i<a.size();i++){
+            for(int j=0;j<b.size();j++){
+                if(a[i]==b[j] && visited[j]==0){
+                    ans.push_back(b[j]);
+                    visited[j] = 1;
+
+                    break;
+                }
+               else if(b[j]>a[i]) break;
+            }
+        }
+        
+        return ans;
+        
+    }
+
+int main(){
+
+vector < int > a {1,2,3,3,4,5,6,7};
+vector < int > b {3,3,4,4,5,8};
+
+  vector<int> ans = intersectionOfArrays(a,b);
+  
+  for (int i = 0; i < ans.size(); i++) {
+    cout << ans[i] << " ";
+  }
+
+  return 0;
+
+
+     
+                  
+}
